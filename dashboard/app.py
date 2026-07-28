@@ -12,8 +12,8 @@ scenario = pd.read_csv("data/processed/scenario_results.csv")
 tab1, tab2, tab3 = st.tabs(["發生了什麼", "未來會怎樣", "方法論與限制"])
 
 with tab1:
-    st.subheader(f"歷史能源負擔比走勢（{int(hist['year'].min())}-{int(hist['year'].max())}）")
     hist = master.dropna(subset=["energy_burden_ratio"])
+    st.subheader(f"歷史能源負擔比走勢（{int(hist['year'].min())}-{int(hist['year'].max())}）")
     fig1 = go.Figure()
     fig1.add_trace(go.Scatter(x=hist["year"], y=hist["energy_burden_ratio"], mode="lines+markers", name="歷史"))
     fig1.update_layout(yaxis_tickformat=".1%")
