@@ -28,7 +28,7 @@ with tab2:
     fig2.update_layout(yaxis_tickformat=".1%")
     fig2.update_xaxes(dtick=1, tickformat="d")
     st.plotly_chart(fig2, use_container_width=True)
-    st.info("提醒：目前訓練資料僅10筆，模型評估顯示Baseline優於Prophet，此處情境預測僅供方向性參考，詳見「方法論與限制」頁。")
+    st.info("提醒：目前訓練資料18筆（2007-2024），模型評估顯示Baseline優於Prophet，此處情境預測僅供方向性參考，詳見「方法論與限制」頁。")
 
 with tab3:
     st.subheader("方法論")
