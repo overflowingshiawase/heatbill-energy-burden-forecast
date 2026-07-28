@@ -9,15 +9,15 @@
 ## Demo
 [線上互動 Dashboard](https://heatbill-energy-poverty-forecast-05.streamlit.app)
 
-![Dashboard總覽](docs/images/overview.png)
+## Dashboard 預覽
 
-### 情境模擬展示
-
-https://github.com/user-attachments/assets/替換成你上傳demo.mp4後GitHub自動產生的連結
+| 發生了什麼 | 未來會怎樣 | 方法論與限制 |
+|---|---|---|
+| ![](docs/images/overview.png) | ![](docs/images/scenario.png) | ![](docs/images/methodology.png) |
 
 ## 這代表什麼
 
-2024年，台灣最低所得組家庭平均可支配所得約 38.4 萬元，最低所得組估算水電燃氣支出：約 9.6 萬元 ——換句話說，每 100 元收入裡，約有25元 花在水電燃氣上。
+2024年，台灣最低所得組家庭平均可支配所得約38.4萬元，估算水電燃氣支出約9.6萬元——換句話說，每100元收入裡，約有25元花在水電燃氣上。
 
 這個數字不是孤立的統計巧合，而是氣候暖化跟綠能轉型兩股力量疊加的具體證據。當冷房需求逐年升高、電價因能源轉型持續調整，最脆弱的家庭承受的壓力會是雙倍的。對政策制定者而言，這代表家電汰換補助不該只看「省了多少電」，而該優先鎖定能源負擔比最高的族群；對社會而言，這代表能源轉型的討論不能只談減碳目標，也要把「誰在承擔轉型成本」放進同一張表格裡看。
 
@@ -49,7 +49,7 @@ https://github.com/user-attachments/assets/替換成你上傳demo.mp4後GitHub�
 | 模型 | MAE | RMSE | MAPE |
 |---|---|---|---|
 | Baseline | 0.0044 | 0.0053 | 1.74% |
-| Prophet | 0.0094 | - | - |
+| Prophet | 0.0094 | 0.0105 | 3.73% |
 
 **關鍵發現**：初版僅10筆訓練資料時，Prophet MAE為0.0178；補齊資料至18筆（2007-2024）後，Prophet MAE降至0.0094，證實資料量對多變量時間序列模型穩定性的關鍵影響。即使如此，Baseline在此資料規模下仍優於Prophet，顯示此類問題可能需要更長期的資料累積才能穩定超越簡單基準——這是誠實的實驗發現，而非模型實作錯誤。
 
@@ -71,8 +71,3 @@ git clone https://github.com/overflowingshiawase/Heatbill-Energy-Poverty-Forecas
 cd Heatbill-Energy-Poverty-Forecast
 pip install -r requirements.txt
 streamlit run dashboard/app.py
-\`\`\`
-cd Heatbill-Energy-Poverty-Forecast
-pip install -r requirements.txt
-streamlit run dashboard/app.py
-\`\`\`
