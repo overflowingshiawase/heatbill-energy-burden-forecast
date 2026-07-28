@@ -21,7 +21,7 @@ with tab1:
     st.metric("2024年能源負擔比", f"{hist['energy_burden_ratio'].iloc[-1]:.1%}")
 
 with tab2:
-    st.subheader(f"歷史能源負擔比走勢（{int(hist['year'].min())}-{int(hist['year'].max())}）")
+    st.subheader("三個情境下的2025-2027預測")
     fig2 = go.Figure()
     for col in scenario.columns[1:]:
         fig2.add_trace(go.Scatter(x=scenario["year"], y=scenario[col], mode="lines+markers", name=col))
