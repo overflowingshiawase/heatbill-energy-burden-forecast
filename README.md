@@ -13,7 +13,7 @@
 
 | 發生了什麼 | 未來會怎樣 | 方法論與限制 |
 |---|---|---|
-| ![](docs/images/overview.png) | ![](docs/images/scenario.png) | ![](docs/images/methodology.png) |
+| ![](docs/images/overview_v2.png) | ![](docs/images/scenario_v2.png) | ![](docs/images/methodology_v2.png) |
 
 ## 這代表什麼
 
